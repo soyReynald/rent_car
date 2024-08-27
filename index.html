@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+		/*Font faces*/
+		@font-face {
+		font-family: "Angels";
+		src:
+			local("Angels"),
+			url("font/converted_fonts/Angels.otf");
+		}
+		
+		@font-face {
+		font-family: "Contrax-sb";
+		src:
+			local("contrax-sb"),
+			url("font/converted_fonts/conthrx-sb.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "HeyComic";
+		src:
+			local("hey_comic"),
+			url("font/converted_fonts/hey_comic.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "RaceSport";
+		src:
+			local("race_sport"),
+			url("font/converted_fonts/race_sport.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "TypeMachine";
+		src:
+			local("type_machine"),
+			url("font/converted_fonts/type_machine.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "HVD Comic Serif Pro";
+		src:
+			local("HVD Comic Serif Pro"),
+			url("font/converted_fonts/HVD_Comic_Serif_Pro.otf");
+		}
+		
+        body {
+            font-family: 'Lato', sans-serif;
+			margin-top: 0px;
+			margin-left: 0px;
+			overflow-x: hidden;
+        }
+        
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            background-color: rgb(255, 255, 255);
+            background-color: rgba(0, 96, 128, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+        
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+        
+        .overlay .closebtn {
+            position: absolute;
+            top: 38px;
+            right: 45px;
+            font-size: 60px;
+        }
+		
+		.over-head {
+			width: 100vw;
+			background-color: #00caeb;
+		}
+		
+		.header_menu {
+			background-color: #00caeb; 
+			color:white;
+			height:40px;
+			font-family: "HVD Comic Serif Pro", serif;
+			margin-top: 0px;
+			padding-top: 10px;
+			position:relative;
+			font-size: 25px;
+		}
+		
+		.header_menu span img {
+		    position: absolute;
+			top: 7%;
+			right: 3%;
+		}
+		
+		main .title {
+			font-weight: 100;
+			color: #007183;
+			font-family: "Angels", serif;
+			text-align: center;
+		}
+		
+		@media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+			.header_menu {
+				font-size: 10px;
+			}
+        }
+		
+		/* Special style to the video */
+		.youtube-video {
+		  aspect-ratio: 16 / 9;
+		  width: 80%;
+		}
+		
+		main{
+			width: 80vw;
+			overflow-x: hidden;
+		    margin-left: auto;
+			margin-right: auto;
+		}
+
+		.video-container {
+			display: grid;
+		}
+
+		main .video-container .youtube-video {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.search_container {
+			background-color: #ff8e7a;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 40px;
+			height: 158px;
+			position: relative;
+			z-index: -3000;
+			margin-top: -40px;
+		}
+		
+		.search_container input[type=text] {
+			background: url(img/inputs_bkg.jpg);
+			max-width: 188px;
+			min-width: 188px;
+			height: 25px;
+			border: 1px;
+			width: 206px;
+			background-size: cover;
+			position: absolute;
+		}
+		
+		.search_container #type_of_vehicle {
+		    margin-left: 70px;
+			margin-right: 210px;
+		}
+		
+		.search_container #fabric_of_vehicle {
+			margin-left: 280px;
+		}
+		
+		.search_container #model_of_vehicle {
+			margin-left: 480px;
+		}
+	
+		.search_container h3 {
+			font-family: "Contra", serif;
+			color: white;
+			margin-left: 70px;
+			font-size: 1.4rem;
+			letter-spacing: 5px;
+		}
+		
+		#search_icon {
+			width: 20px;
+			margin-left: 40px;
+			margin-top: 2px;
+		}
+		
+		.search_button {
+			display: block;
+			position: absolute;
+			right: 0;
+			margin-right: 185px;
+			background: white;
+			width: 120px;
+			text-align: center;
+			height: 28px;
+		}
+		
+		.search_button input[type=button] {
+			background: none;
+			border: none;
+			position: absolute;
+			left: 14%;
+			top: 14%;
+		}
+    </style>
+</head>
+
+<body>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" 
+           class="closebtn"
+           onclick="closeNav()">&times;</a>
+      
+        <div class="overlay-content">
+            <a href="#">Login</a>
+            <a href="#">SignUp</a>
+            <a href="#">AboutUs</a>
+            <a href="#">ContactUs</a>
+        </div>
+    </div>
+
+	<div class="over-head">
+    <menu class="header_menu">Forza Motosport Rent-car
+		<span style="font-size:30px;
+             cursor:pointer; 
+             float:right; "
+      onclick="openNav()">
+			<img src="img/menu_icon.png" width="45" height="45" alt="Menu"/>
+		</span>
+	</menu>
+	</div>
+	<main>
+		<h1 class="title">Rental car</h1>
+		<div class="video-container">
+			<iframe class="youtube-video" src="https://www.youtube.com/embed/9aAr5blVy0g?si=C6i9wpdRDwZwIfly" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+		
+		<div class="search_container">
+			<form method="post" action="functions/search_car.php">
+				<h3>Search your vehicle</h3>
+				<input name="type" id="type_of_vehicle" type="text" value="" placeholder="Type" />
+				<input name="fabric" id="fabric_of_vehicle" type="text" value="" placeholder="Fabric" />
+				<input name="model"  id="model_of_vehicle" type="text" value="" placeholder="Model" />
+				
+				<span class="search_button">
+					<input type="button" name="search_vehicle" value="Search" />
+					<img src="img/lupe_icon.png" alt="search_icon" id="search_icon" />
+				</span>
+			</form>
+		</div>
+	</main>
+    <script>
+        function openNav() {
+            document.getElementById(
+              "myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById(
+              "myNav").style.width = "0%";
+        }
+    </script>
+
+</body>
+
+</html>
