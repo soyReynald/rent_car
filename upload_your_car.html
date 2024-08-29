@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/favicon/android-chrome-512x512.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="manifest" href="/manifest.json"/>
+    <style>
+		/*Font faces*/
+		@font-face {
+		font-family: "Angels";
+		src:
+			local("Angels"),
+			url("font/converted_fonts/Angels.otf");
+		}
+		
+		@font-face {
+		font-family: "Contrax-sb";
+		src:
+			local("contrax-sb"),
+			url("font/converted_fonts/conthrx-sb.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "HeyComic";
+		src:
+			local("hey_comic"),
+			url("font/converted_fonts/hey_comic.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "RaceSport";
+		src:
+			local("race_sport"),
+			url("font/converted_fonts/race_sport.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "TypeMachine";
+		src:
+			local("type_machine"),
+			url("font/converted_fonts/type_machine.otf") format("opentype");
+		}
+		
+		@font-face {
+		font-family: "HVD Comic Serif Pro";
+		src:
+			local("HVD Comic Serif Pro"),
+			url("font/converted_fonts/HVD_Comic_Serif_Pro.otf");
+		}
+		
+        body {
+            font-family: 'Lato', sans-serif;
+			margin-top: 0px;
+			margin-left: 0px;
+			overflow-x: hidden;
+        }
+        
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            background-color: rgb(255, 255, 255);
+            background-color: rgba(0, 96, 128, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+        
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+        
+        .overlay .closebtn {
+            position: absolute;
+            top: 38px;
+            right: 45px;
+            font-size: 60px;
+        }
+		
+		.over-head {
+			width: 100vw;
+			background-color: #00caeb;
+		}
+		
+		.header_menu {
+			background-color: #00caeb; 
+			color:white;
+			height:40px;
+			font-family: "HVD Comic Serif Pro", serif;
+			margin-top: 0px;
+			padding-top: 10px;
+			position:relative;
+			font-size: 25px;
+		}
+		
+		.header_menu span img {
+		    position: absolute;
+			top: 7%;
+			right: 3%;
+		}
+		
+		main .title {
+			font-weight: 100;
+			color: #007183;
+			font-family: "Angels", serif;
+			text-align: center;
+		}
+		
+		@media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+			.header_menu {
+				font-size: 10px;
+			}
+        }
+		
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" 
+           class="closebtn"
+           onclick="closeNav()">&times;</a>
+      
+        <div class="overlay-content">
+            <a href="./index.html">Home</a>
+            <a href="./upload_your_car.html">Upload your car</a>
+            <a href="#">Contact</a>
+            <a href="#">Buy</a>
+        </div>
+    </div>
+
+	<div class="over-head">
+		<menu class="header_menu">Forza Motosport Rent-car
+			<span style="font-size:30px;
+				 cursor:pointer; 
+				 float:right; "
+		  onclick="openNav()">
+				<img src="img/menu_icon.png" width="45" height="45" alt="Menu"/>
+			</span>
+		</menu>
+	</div>
+	<main class="upload_container">
+		<input
+			type="file"
+			class="inputFile"
+			id="fileInp"
+			onChange="getFile(event)"
+			accept="image/png, image/jpeg"
+		/>
+		<label for="fileInp">+</label>
+		<span class="fileText"></span> 
+		<button>UPLOAD IMAGE</button>
+		
+		<div class="bar">
+			<div class="progress"></div>
+		</div>
+		<div class="uploadPercentage">0%</div>
+	</div>
+	</main>
+    <script>
+        function openNav() {
+            document.getElementById(
+              "myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById(
+              "myNav").style.width = "0%";
+        }
+    </script>
+
+</body>
+
+</html>
