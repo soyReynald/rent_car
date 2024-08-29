@@ -1,0 +1,42 @@
+[33mcommit 830c20b6ba095151198d6a987b6d2f4f3ab0bb34[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: soyreynald <reynaldramirez@hotmail.com>
+Date:   Wed Aug 28 20:40:40 2024 -0400
+
+    [U] Update
+
+[33mcommit ac8edacc21acfcd8577deff1cebfec48c2bb90d1[m
+Author: soyreynald <reynaldramirez@hotmail.com>
+Date:   Wed Aug 28 20:34:26 2024 -0400
+
+    [U] Ignoring modules
+
+[33mcommit d263c0aea5c1634f9da4fe84b996506b257f578e[m
+Author: soyreynald <reynaldramirez@hotmail.com>
+Date:   Wed Aug 28 20:17:07 2024 -0400
+
+    [U] Update to show the guys the code of the app of the group 2
+
+[33mcommit 03744ae2bae4bb32573fdeaa2e415e06e4201dc1[m
+Author: Commander of Jesus: Reyo / Reynald R. <reynaldramirez@hotmail.com>
+Date:   Tue Aug 27 00:58:54 2024 -0400
+
+    Update README.md
+
+[33mcommit c764772d005e71f9e921039166719031bb9ff5f5[m
+Merge: dcd5e3f 6412068
+Author: soyreynald <reynaldramirez@hotmail.com>
+Date:   Tue Aug 27 00:57:14 2024 -0400
+
+    Merge branch 'master' of https://github.com/soyReynald/rent_car
+
+[33mcommit dcd5e3f3b2eafdd3624a7c2ff412031eb42d4150[m
+Author: soyreynald <reynaldramirez@hotmail.com>
+Date:   Tue Aug 27 00:56:32 2024 -0400
+
+    [I] Initial commit to the rent car
+
+[33mcommit 6412068f85d6f65352debffb41549376bed96c31[m
+Author: Commander of Jesus: Reyo / Reynald R. <reynaldramirez@hotmail.com>
+Date:   Tue Aug 27 00:55:43 2024 -0400
+
+    Initial commit
