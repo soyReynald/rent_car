@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "http-server": "^14.1.1",
+    "unirest-request-handler": "^0.0.3",
     "workbox-cli": "^7.1.0"
-  }
+  },
+  "type": "module"
 }
